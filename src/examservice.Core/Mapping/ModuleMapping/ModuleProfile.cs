@@ -7,6 +7,7 @@ namespace examservice.Core.Mapping.ModuleMapping
         public ModuleProfile()
         {
             GenerateModuleMapping();
+            ViewModuleQuestionsMapping();
         }
     }
 }

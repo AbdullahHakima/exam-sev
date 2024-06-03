@@ -32,3 +32,4 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\ex
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\refint\examservice.Service.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.pdb
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\ref\examservice.Service.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.sourcelink.json

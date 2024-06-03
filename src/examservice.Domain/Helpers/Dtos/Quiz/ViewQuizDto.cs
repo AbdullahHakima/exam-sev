@@ -13,13 +13,8 @@ namespace examservice.Domain.Helpers.Dtos.Quiz
         public int Capacity { get; set; }
         public decimal Grade { get; set; }
         public double Duration { get; set; }
-
         public string status { get; set; }// status of the quiz
-
         public List<ViewGeneratedModuleDto> Modules { get; set; }
 
-        public string InstructorName { get; set; }
-
-        public string CourseName { get; set; }
     }
 }

@@ -42,7 +42,6 @@
     <Folder Include="Features\Students\Queries\Handlers\" />
     <Folder Include="Features\Students\Queries\Models\" />
     <Folder Include="Features\Students\Queries\Response\" />
-    <Folder Include="Mapping\ModuleMapping\Queries\" />
     <Folder Include="Mapping\QuestionMapping\Queries\" />
     <Folder Include="Mapping\QuizMapping\Queries\" />
     <Folder Include="Mapping\StudentMapping\Queries\" />

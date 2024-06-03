@@ -1,0 +1,17 @@
+C:\Users\sohee\source\repos\exam-sev\src\out\examservice.Core.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\out\examservice.Core.dll
+C:\Users\sohee\source\repos\exam-sev\src\out\examservice.Core.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.csproj.AssemblyReference.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.AssemblyInfoInputs.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.AssemblyInfo.cs
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.csproj.CoreCompileInputs.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.sourcelink.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examserv.C82CFEB2.Up2Date
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\refint\examservice.Core.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\examservice.Core.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\ref\examservice.Core.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Core.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Core.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Core.pdb

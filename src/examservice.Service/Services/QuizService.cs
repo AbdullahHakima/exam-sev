@@ -23,7 +23,7 @@ public class QuizService : IQuizService
     #endregion
 
     #region Methods
-    public async Task<Quiz?> CreateQuiz(Quiz quizData)
+    public async Task<Quiz?> CreateQuizAsync(Quiz quizData)
     {
 
         return await _quizRepository.AddAsync(quizData);
@@ -48,7 +48,7 @@ public class QuizService : IQuizService
         return inquiredQuizzes.ToList();
     }
 
-    public async Task<Quiz?> GetQuizById(Guid quizId)
+    public async Task<Quiz?> GetQuizByIdAsync(Guid quizId)
     {
         return _quizRepository.GetTableNoTracking()
                               .Include(q => q.Instructor)
@@ -69,7 +69,7 @@ public class QuizService : IQuizService
 
     }
 
-    public async Task UpdateQuiz(Quiz updatedQuizData)
+    public async Task UpdateQuizAsync(Quiz updatedQuizData)
     {
         await _quizRepository.UpdateAsync(updatedQuizData);
     }

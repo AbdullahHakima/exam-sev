@@ -1,0 +1,16 @@
+C:\Users\sohee\source\repos\exam-sev\src\out\examservice.Domain.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\out\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\out\examservice.Domain.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.csproj.AssemblyReference.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.AssemblyInfoInputs.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.AssemblyInfo.cs
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.csproj.CoreCompileInputs.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.sourcelink.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\refint\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\examservice.Domain.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\ref\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Domain.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Domain.pdb

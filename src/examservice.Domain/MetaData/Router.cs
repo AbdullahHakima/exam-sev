@@ -49,14 +49,8 @@ public static class Router
     {
         public const string Prefix = GeneralRule + "courses/{courseId}/instructors/{instructorId}/quizzes";
         public const string CreateQuiz = Prefix + "/createquiz";
-        public const string GetQuizModules = Prefix + "/{quizId}/modules/List";
-        //for web Get request
-        public const string GetById = Prefix + "/{quizId}/Details";
-        //for mobile post request
-        public const string ViewQuizDetails = Prefix + "/{quizId}/Details";
-        public const string GetAllCourseQuizzes = Prefix + "/List";
-        public const string UpdateQuiz = Prefix + "/{quizId}";
-        public const string IncomingQuizzes = GeneralRule + "courses/{courseId}/quizzes/incommingList";
+        public const string PublishQuiz = Prefix + "/{quizId}/publish";
+        public const string EnrollToQuiz = Prefix + "/EnrollToQuiz";
     }
 
 }

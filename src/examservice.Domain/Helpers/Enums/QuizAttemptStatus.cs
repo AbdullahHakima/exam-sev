@@ -5,5 +5,6 @@ public enum QuizAttemptStatus
     Panding,
     Submitted,
     Late,
-    Missed
+    Missed,
+    NotAttempted
 }

@@ -32,3 +32,4 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\ne
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.pdb
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.genruntimeconfig.cache
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\ref\examservice.Infrastructure.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.sourcelink.json

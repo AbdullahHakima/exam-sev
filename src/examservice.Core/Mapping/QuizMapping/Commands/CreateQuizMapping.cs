@@ -13,7 +13,6 @@ namespace examservice.Core.Mapping.QuizMapping
                 .ForMember(dest => dest.Status, opt => opt.MapFrom(src => QuizStatus.draft))
                 .ForMember(dest => dest.ClosedAt, opt => opt.MapFrom(src => src.ClosedAt.ToUniversalTime()))
                 .ForMember(dest => dest.StartedDate, opt => opt.MapFrom(src => src.StartedDate.ToUniversalTime()))
-                .ForMember(dest => dest.Capacity, opt => opt.MapFrom(src => src.Capacity))
                 .ForMember(dest => dest.Description, opt => opt.MapFrom(src => src.Description))
                 .ForMember(dest => dest.Grade, opt => opt.MapFrom(src => src.Grade))
                 .ForMember(dest => dest.Duration, opt => opt.MapFrom(src => src.Duration))

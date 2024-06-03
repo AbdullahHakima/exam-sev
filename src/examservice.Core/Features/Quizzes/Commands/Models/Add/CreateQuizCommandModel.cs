@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace examservice.Core.Features.Quizzes.Commands.Models.Add
 {
-    public class CreateQuizCommandModel : IRequest<Response<ViewQuizDto>>
+    public class CreateQuizCommandModel : IRequest<Response<string>>
     {
         [FromForm]
         public CreateQuizDto quizDto { get; set; }

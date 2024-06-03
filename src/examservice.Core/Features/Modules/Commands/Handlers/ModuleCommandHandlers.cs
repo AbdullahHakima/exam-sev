@@ -39,7 +39,7 @@ public class ModuleCommandHandlers : ResponseHandler, IRequestHandler<GenerateMo
         if (IsQuestionsSheetEmpty(request.moduleDto.questionBank))
         {
             questionsBank = await _questionService.GetAllQuestionsAsync(request.courseId);
-            generatedModules = await GenerateModulesAsync(questionsBank, request);
+            generatedModules = await GenerateModulesAsync(questionsBank, request, request.moduleDto.IsSaveUploadedQuestions);
             mappedModules = _mapper.Map<List<ViewGeneratedModuleDto>>(generatedModules);
             return Success(mappedModules, "Modules are generated Successfully");
         }
@@ -51,7 +51,7 @@ public class ModuleCommandHandlers : ResponseHandler, IRequestHandler<GenerateMo
             return BadRequest<List<ViewGeneratedModuleDto>>(null, "Something occurred while uploading questions sheet");
         }
 
-        generatedModules = await GenerateModulesAsync(questionsBank, request);
+        generatedModules = await GenerateModulesAsync(questionsBank, request, request.moduleDto.IsSaveUploadedQuestions);
         mappedModules = _mapper.Map<List<ViewGeneratedModuleDto>>(generatedModules);
         return Success(mappedModules, "Modules are generated Successfully");
     }
@@ -61,10 +61,12 @@ public class ModuleCommandHandlers : ResponseHandler, IRequestHandler<GenerateMo
         return questionsSheet == null || questionsSheet.Length == 0;
     }
 
-    private async Task<List<Question>> ProcessQuestionsSheetAsync(GenerateModulesCommandModel request, bool IsSaved)
+    private async Task<List<Question>> ProcessQuestionsSheetAsync(GenerateModulesCommandModel request, bool? IsSaved)
     {
 
         var addedQuestions = new List<Question>();
+        var quetionsBank = new List<Question>();
+
         using var stream = request.moduleDto.questionBank.OpenReadStream();
         var questions = _excelProsessorService.ProcessExcelData(stream, request.courseId);
 
@@ -74,25 +76,32 @@ public class ModuleCommandHandlers : ResponseHandler, IRequestHandler<GenerateMo
         }
 
         //Save uploaded questions in db
-        if (IsSaved)
+        if (IsSaved is not null && IsSaved == true)
         {
             foreach (var question in questions)
             {
                 var existingQuestion = await _questionService.GetQuestionByName(question.Text, question.CourseId);
                 if (existingQuestion is not null)
+                {
+                    quetionsBank.Add(existingQuestion);
                     continue;
+                }
                 addedQuestions.Add(question);
             }
             //save the question which is not already saved in db
             await SaveUploadedQuestions(addedQuestions);
+            foreach (var question in addedQuestions)
+                quetionsBank.Add(await _questionService.GetQuestionByName(question.Text, question.CourseId));
+            //return questions after added them in db
+            return quetionsBank;
         }
         // return the questions that processed from excel file  
         return questions;
     }
 
-    private async Task<List<Module>> GenerateModulesAsync(List<Question> questionsBank, GenerateModulesCommandModel request)
+    private async Task<List<Module>> GenerateModulesAsync(List<Question> questionsBank, GenerateModulesCommandModel request, bool? IsSave)
     {
-        return await _moduleService.GenerateModulesAsync(questionsBank, request.moduleDto.numberOfModules, request.moduleDto.numberOfQuestionPerModule, request.courseId, request.instructorId);
+        return await _moduleService.GenerateModulesAsync(questionsBank, request.moduleDto.numberOfModules, request.moduleDto.numberOfQuestionPerModule, request.courseId, request.instructorId, IsSave);
     }
 
     private async Task SaveUploadedQuestions(List<Question> uploadedQuestions)

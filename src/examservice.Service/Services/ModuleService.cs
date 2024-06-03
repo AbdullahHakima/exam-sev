@@ -1,4 +1,5 @@
 ﻿using examservice.Domain.Entities;
+using examservice.Domain.Helpers.Dtos.Module;
 using examservice.Domain.Helpers.Enums;
 using examservice.Infrastructure.Interfaces;
 using examservice.Service.Interfaces;
@@ -28,25 +29,47 @@ public class ModuleService : IModuleService
     #endregion
     #region Methods
 
-    public async Task<List<Module>> GenerateModulesAsync(List<Question> quizQuestions, int numberOfModules, int numberOfQuestionsPerModule, Guid courseId, Guid instructorId)
+    public async Task<List<Module>> GenerateModulesAsync(List<Question> quizQuestions, int numberOfModules, int numberOfQuestionsPerModule, Guid courseId, Guid instructorId, bool? isSaved)
+    {
+        ValidateParameters(quizQuestions, numberOfModules, numberOfQuestionsPerModule);
+
+        List<Question> shuffledQuestions = ShuffleQuestions(quizQuestions);
+        List<Module> modules = CreateModules(shuffledQuestions, numberOfModules, numberOfQuestionsPerModule);
+
+        var cacheEntry = new ModuleCacheEntry
+        {
+            Modules = modules,
+            IsSaved = isSaved
+        };
+
+        await StoreModulesInCacheAsync(courseId, instructorId, cacheEntry);
+
+        return modules;
+    }
+
+    private void ValidateParameters(List<Question> quizQuestions, int numberOfModules, int numberOfQuestionsPerModule)
     {
         if (quizQuestions == null || quizQuestions.Count == 0 || numberOfModules <= 0 || numberOfQuestionsPerModule <= 0)
             throw new ArgumentException("Invalid input parameters");
 
-        // Shuffle the questions
-        Random rng = new Random();
-        List<Question> shuffledQuestions = quizQuestions.OrderBy(q => rng.Next()).ToList();
-
         int totalQuestions = numberOfModules * numberOfQuestionsPerModule;
         if (totalQuestions > quizQuestions.Count)
             throw new ArgumentException("Not enough questions available for the given parameters");
+    }
 
+    private List<Question> ShuffleQuestions(List<Question> quizQuestions)
+    {
+        Random rng = new Random();
+        return quizQuestions.OrderBy(q => rng.Next()).ToList();
+    }
+
+    private List<Module> CreateModules(List<Question> shuffledQuestions, int numberOfModules, int numberOfQuestionsPerModule)
+    {
         List<Module> modules = new List<Module>();
+
         for (int i = 0; i < numberOfModules; i++)
         {
             List<Question> moduleQuestions = shuffledQuestions.Skip(i * numberOfQuestionsPerModule).Take(numberOfQuestionsPerModule).ToList();
-
-            decimal totalModuleGrade = moduleQuestions.Sum(q => q.Points);
 
             Module module = new Module
             {
@@ -70,48 +93,38 @@ public class ModuleService : IModuleService
                         }).ToList()
                     }
                 }).ToList(),
-                TotalGrade = totalModuleGrade
-
+                TotalGrade = moduleQuestions.Sum(q => q.Points)
             };
-
-
 
             modules.Add(module);
         }
 
+        return modules;
+    }
+
+    private async Task StoreModulesInCacheAsync(Guid courseId, Guid instructorId, ModuleCacheEntry cacheEntry)
+    {
         try
         {
-            // Serialize modules
-            var serializedModules = JsonConvert.SerializeObject(modules);
+            string cacheKey = $"GeneratedModules:{courseId}:{instructorId}";
+            string serializedCacheEntry = JsonConvert.SerializeObject(cacheEntry);
 
-            // Generate cache key based on courseId and instructorId
-            var cacheKey = $"GeneratedModules:{courseId}:{instructorId}";
-
-            // Acquire asynchronous lock before accessing/modifying cache
             await _asyncLock.WaitAsync();
-
             try
             {
-                // Set the serialized modules in the cache
-                await _cache.SetStringAsync(cacheKey, serializedModules);
+                await _cache.SetStringAsync(cacheKey, serializedCacheEntry);
             }
             finally
             {
-                // Release the lock
                 _asyncLock.Release();
             }
-
-            return modules;
         }
         catch (Exception ex)
         {
-            // Handle the exception (e.g., log the error)
             Console.WriteLine($"Error storing modules in Redis cache: {ex.Message}");
             throw;
         }
     }
-
-
 
 
     public async Task<Module?> GetModuleById(Guid moduleId)
@@ -144,7 +157,13 @@ public class ModuleService : IModuleService
         }
         return addedModules;
     }
-    public async Task<int> AssignModulesToStudent(List<Module> quizModules, List<Student> students, Guid quizId)
+
+    public async Task<Module> SaveModuleAsync(Module module)
+    {
+        _moduleRepository.DetachQuestions(module);
+        return await _moduleRepository.AddAsync(module);
+    }
+    public async Task<int> AssignModulesToStudentAsync(List<Module> quizModules, List<Student> students, Guid quizId)
     {
         var moduleIds = quizModules.Select(m => m.Id).ToList();
         // Shuffle the module IDs to randomize the assignment
@@ -161,8 +180,8 @@ public class ModuleService : IModuleService
                 StudentId = students[i].Id,
                 QuizId = quizId,
                 ModuleId = shuffledModuleIds[i % shuffledModuleIds.Count],
-                AttemptStatus = QuizAttemptStatus.Missed,
-                Enrolled = true
+                AttemptStatus = QuizAttemptStatus.NotAttempted,
+                Enrolled = false
             };
 
             studentModuleAssignments.Add(assignment);
@@ -183,6 +202,7 @@ public class ModuleService : IModuleService
 
         return studentQuiz.Module;
     }
+
 
     #endregion
 
