@@ -59,6 +59,9 @@ public class QuizService : IQuizService
                               .FirstOrDefault(q => q.Id == quizId);
     }
 
+
+
+
     public async Task HandleEndedQuizzessAsync()
     {
         var endedQuizzes = await _quizRepository.GetEndedQuizzesAsync();

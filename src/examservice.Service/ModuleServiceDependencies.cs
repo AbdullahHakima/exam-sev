@@ -49,7 +49,7 @@ namespace examservice.Service
                 recurringJobManager.AddOrUpdate(
                     "UpdateStudentSubmission",
                     () => serviceProvider.GetRequiredService<IScheduledTaskService>().UpdateSubmissionForEndedQuizzes(),
-                    Cron.Hourly());  // Cron expression for every minute
+                    Cron.Hourly());  // Cron expression for every hour
             }
 
             return services;

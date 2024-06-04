@@ -4,9 +4,9 @@ namespace examservice.Service.Interfaces;
 
 public interface ICourseService
 {
-    public Task<Course?> GetById(Guid id);
-    public Task<Course> AddNew(Course course);
-    public Task<Course?> GetByName(string name);
+    public Task<Course?> GetByIdAsync(Guid id);
+    public Task<Course> AddNewAsync(Course course);
+    public Task<Course?> GetByNameAsync(string name);
 
 
 }

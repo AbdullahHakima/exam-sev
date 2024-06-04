@@ -24,11 +24,8 @@ public class StudentQuizzesService : IStudentQuizzesService
     {
         return _studentQuizzesRepository.GetTableNoTracking()
                                                   .Include(sq => sq.quiz)
+                                                    .ThenInclude(q => q.Instructor)
                                                   .Include(sq => sq.submission)
-                                                   .Include(sq => sq.Module)
-                                                    .ThenInclude(sm => sm.ModuleQuestions)
-                                                     .ThenInclude(mq => mq.Question)
-                                                      .ThenInclude(q => q.Options)
                                                    .SingleOrDefault(sq => (sq.QuizId == quizId && sq.StudentId == studentId));
     }
 

@@ -27,9 +27,7 @@ public static class Router
     public static class InstructorRouting
     {
         public const string Prefix = GeneralRule + "instructors";
-        public const string AddInstructor = Prefix + "/AddInstructor";
-        public const string GetById = Prefix + "/{instructorId}";
-        public const string InstructorCourses = Prefix + "/{instructorId}/courses";
+
     }
 
     public static class CourseRouting
@@ -51,6 +49,9 @@ public static class Router
         public const string CreateQuiz = Prefix + "/createquiz";
         public const string PublishQuiz = Prefix + "/{quizId}/publish";
         public const string EnrollToQuiz = Prefix + "/EnrollToQuiz";
+        public const string SubmitQuiz = Prefix + "/Submit";
+        public const string ViewStudentQuizDetails = Prefix + "/ViewQuizDetails";
+        public const string ViewInstructorQuizzes = Prefix + "/All";
     }
 
 }

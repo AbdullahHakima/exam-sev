@@ -1,5 +1,6 @@
 ﻿using examservice.API.Base;
 using examservice.Core.Features.Quizzes.Commands.Models.Add;
+using examservice.Core.Features.Quizzes.Queries.Models;
 using examservice.Domain.Helpers.Dtos.Quiz;
 using examservice.Domain.MetaData;
 using Microsoft.AspNetCore.Mvc;
@@ -34,5 +35,24 @@ public class QuizController : ApplicationController
         var response = await Mediator.Send(new EnrollToQuizCommanModel { enrollDto = enrollDto });
         return NewResult(response);
     }
+    [HttpPost(Router.QuizRouting.SubmitQuiz)]
+    public async Task<IActionResult> SubmitQuizAsync([FromBody] SubmitQuizDto submitDto)
+    {
+        var response = await Mediator.Send(new SubmitQuizCommandModel { submitDto = submitDto });
+        return NewResult(response);
+    }
+    [HttpPost(Router.QuizRouting.ViewStudentQuizDetails)]
+    public async Task<IActionResult> ViewStudentQuizDetailsAsync([FromBody] GetStudentQuizDto dto)
+    {
+        var response = await Mediator.Send(new ViewStudentQuizQueryModel { StudentQuizDto = dto });
+        return NewResult(response);
+    }
+    [HttpGet(Router.QuizRouting.ViewInstructorQuizzes)]
+    public async Task<IActionResult> ViewInstructorQuizzesAsync([FromRoute] GetInstructorQuizzesDto dto)
+    {
+        var response = await Mediator.Send(new ViewInstructorQuizzesQueryModel { instructorQuizzesDto = dto });
+        return NewResult(response);
+    }
+
 
 }

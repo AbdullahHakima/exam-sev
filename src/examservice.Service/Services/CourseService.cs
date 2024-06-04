@@ -17,12 +17,12 @@ public class CourseService : ICourseService
     }
     #endregion
     #region Methods
-    public async Task<Course> AddNew(Course course)
+    public async Task<Course> AddNewAsync(Course course)
     {
         return await _courseRepository.AddAsync(course);
     }
 
-    public async Task<Course?> GetById(Guid id)
+    public async Task<Course?> GetByIdAsync(Guid id)
     {
         return await _courseRepository.GetTableNoTracking()
                                .Include(c => c.Questions)
@@ -31,7 +31,7 @@ public class CourseService : ICourseService
 
     }
 
-    public async Task<Course?> GetByName(string name)
+    public async Task<Course?> GetByNameAsync(string name)
     {
         return await _courseRepository.FindAsync(c => c.Name == name);
     }

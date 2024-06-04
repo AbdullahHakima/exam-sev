@@ -1,7 +1,12 @@
 # Use the official .NET Core SDK image as a build stage
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build-dev
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+USER app
+WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
+
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 
 # Copy csproj and restore as distinct layers
@@ -20,11 +25,14 @@ COPY . ./
 
 # Specify the project to build
 WORKDIR /src/examservice.Api
-RUN dotnet build examservice.Api.csproj -c Release -o out
+RUN dotnet build examservice.Api.csproj -c $BUILD_CONFIGURATION -o /app/build
 
-# Use the official ASP.NET Core runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+FROM build AS publish
+ARG BUILD_CONFIGURATION=Release
+RUN dotnet publish examservice.Api.csproj -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+
+
+FROM base AS final
 WORKDIR /app
-
-COPY --from=build-dev /src/examservice.Api/out ./
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "examservice.Api.dll"]

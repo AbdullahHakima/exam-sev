@@ -3,6 +3,7 @@ using examservice.Core.Middlewares;
 using examservice.Infrastructure;
 using examservice.Infrastructure.Data;
 using examservice.Service;
+using Hangfire;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 using System.Text.Json.Serialization;
@@ -84,6 +85,6 @@ app.UseAuthorization();
 
 app.MapControllers();
 
-//app.MapHangfireDashboard();
+app.MapHangfireDashboard();
 
 app.Run();

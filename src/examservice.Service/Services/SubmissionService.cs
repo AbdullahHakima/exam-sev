@@ -30,7 +30,7 @@ public class SubmissionService : ISubmissionService
 
 
     #region Methods
-    public async Task<Submission> AddSubmission(Submission submission)
+    public async Task<Submission> AddSubmissionAsync(Submission submission)
     {
         return await _submissionsRepository.AddAsync(submission);
     }
@@ -52,7 +52,7 @@ public class SubmissionService : ISubmissionService
     {
         decimal fianlGrade;
 
-        var quiz = await _quizRepository.FindAsync(q => q.Id == quizId, new[] { "StudentQuizzes" });
+        var quiz = await _quizRepository.FindAsync(q => q.Id == quizId);
 
         var studentQuizzes = _studentQuizzesRepository.GetTableNoTracking()
                                                         .Include(s => s.Module)

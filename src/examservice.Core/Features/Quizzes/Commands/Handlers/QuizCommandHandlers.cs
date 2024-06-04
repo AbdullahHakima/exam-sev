@@ -14,6 +14,7 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
     public class QuizCommandHandlers : ResponseHandler, IRequestHandler<CreateQuizCommandModel, Response<string>>
                                                       , IRequestHandler<PublishQuizCommandModel, Response<string>>
                                                       , IRequestHandler<EnrollToQuizCommanModel, Response<ViewQuizModuleDto>>
+                                                      , IRequestHandler<SubmitQuizCommandModel, Response<string>>
     {
         #region Fields
         private readonly IMapper _mapper;
@@ -22,10 +23,11 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
         private readonly IModuleService _moduleService;
         private readonly IStudentService _studentService;
         private readonly IStudentQuizzesService _studentQuizzesService;
+        private readonly ISubmissionService _submissionService;
         #endregion
 
         #region Constructors
-        public QuizCommandHandlers(IMapper mapper, IQuizService quizService, IModuleService moduleService, IDistributedCache cache, IStudentService studentService, IStudentQuizzesService studentQuizzesService)
+        public QuizCommandHandlers(IMapper mapper, IQuizService quizService, IModuleService moduleService, IDistributedCache cache, IStudentService studentService, IStudentQuizzesService studentQuizzesService, ISubmissionService submissionService)
         {
             _mapper = mapper;
             _quizService = quizService;
@@ -33,6 +35,7 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
             _cache = cache;
             _studentService = studentService;
             _studentQuizzesService = studentQuizzesService;
+            _submissionService = submissionService;
         }
         #endregion
 
@@ -84,7 +87,7 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
         }
 
 
-        public async Task CacheQuestionsAsync(List<Question> questions, Guid moduleId, DateTimeOffset expiration)
+        private async Task CacheQuestionsAsync(List<Question> questions, Guid moduleId, DateTimeOffset expiration)
         {
             var cacheKey = $"ModuleQuestions:{moduleId}";
             var serializedQuestions = JsonConvert.SerializeObject(questions);
@@ -144,7 +147,7 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
             return Success(moduleMapped);
         }
 
-        public async Task<List<Question>> GetQuestionsFromCache(Guid moduleId)
+        private async Task<List<Question>> GetQuestionsFromCache(Guid moduleId)
         {
             var cacheKey = $"ModuleQuestions:{moduleId}";
             var serializedQuestions = await _cache.GetStringAsync(cacheKey);
@@ -153,6 +156,29 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
                 return null;
             }
             return JsonConvert.DeserializeObject<List<Question>>(serializedQuestions);
+        }
+
+        public async Task<Response<string>> Handle(SubmitQuizCommandModel request, CancellationToken cancellationToken)
+        {
+            var inquiredQuiz = await _studentQuizzesService.GetStudentQuizAsync(request.submitDto.quizId, request.submitDto.studentId);
+            if (inquiredQuiz == null) return NotFound<string>("Quiz you are trying to submit not founded");
+            if (!inquiredQuiz.Enrolled)
+            {
+                var mappedSubmit = _mapper.Map<Submission>(request.submitDto);
+                mappedSubmit = await _submissionService.AddSubmissionAsync(mappedSubmit);
+                if (mappedSubmit != null)
+                {
+                    inquiredQuiz.AttemptStatus = QuizAttemptStatus.Panding;
+                    inquiredQuiz.SubmissionId = mappedSubmit.Id;
+                    inquiredQuiz.Enrolled = true;
+                    await _studentQuizzesService.UpdateStudentQuizAsync(inquiredQuiz);
+                    return Success("Your Submit successfuly saved and under processing");
+                }
+
+                return BadRequest("something occure while processing your request");
+            }
+
+            return BadRequest("User has already Submit his quiz ");
         }
         #endregion
     }

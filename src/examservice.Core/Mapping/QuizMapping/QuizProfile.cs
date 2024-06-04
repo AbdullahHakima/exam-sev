@@ -7,6 +7,8 @@ namespace examservice.Core.Mapping.QuizMapping
         public QuizProfile()
         {
             CreateQuizMapping();
+            ViewStudentQuizDetailsMapping();
+            ViewInstructorQuizzesMapping();
         }
     }
 }
