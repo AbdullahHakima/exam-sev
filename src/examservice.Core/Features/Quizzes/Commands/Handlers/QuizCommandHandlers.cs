@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using examservice.Core.Bases;
 using examservice.Core.Features.Quizzes.Commands.Models.Add;
+using examservice.Core.Features.Quizzes.Commands.Models.Delete;
+using examservice.Core.Features.Quizzes.Commands.Models.Updated;
 using examservice.Domain.Entities;
 using examservice.Domain.Helpers.Dtos.Module;
 using examservice.Domain.Helpers.Enums;
@@ -15,6 +17,8 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
                                                       , IRequestHandler<PublishQuizCommandModel, Response<string>>
                                                       , IRequestHandler<EnrollToQuizCommanModel, Response<ViewQuizModuleDto>>
                                                       , IRequestHandler<SubmitQuizCommandModel, Response<string>>
+                                                      , IRequestHandler<UpdateQuizCommandModel, Response<string>>
+                                                      , IRequestHandler<DeleteQuizCommandModel, Response<string>>
     {
         #region Fields
         private readonly IMapper _mapper;
@@ -179,6 +183,23 @@ namespace examservice.Core.Features.Quizzes.Commands.Handlers
             }
 
             return BadRequest("User has already Submit his quiz ");
+        }
+
+        public async Task<Response<string>> Handle(UpdateQuizCommandModel request, CancellationToken cancellationToken)
+        {
+            var inquiredQuiz = await _quizService.GetQuizByIdAsync(request.updateDto.quizId);
+            if (inquiredQuiz == null) return NotFound<string>("Quiz Not Founded");
+            var mappedQuiz = _mapper.Map(request.deatilsDto, inquiredQuiz);
+            await _quizService.UpdateQuizAsync(mappedQuiz);
+            return Success("Quiz updated successfully");
+        }
+
+        public async Task<Response<string>> Handle(DeleteQuizCommandModel request, CancellationToken cancellationToken)
+        {
+            var inquiredQuiz = await _quizService.GetQuizByIdAsync(request.commandDto.quizId);
+            if (inquiredQuiz == null) return NotFound<string>("Quiz not founded");
+            await _quizService.DeleteQuizAsync(inquiredQuiz);
+            return Deleted<string>();
         }
         #endregion
     }

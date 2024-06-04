@@ -29,6 +29,11 @@ public class QuizService : IQuizService
         return await _quizRepository.AddAsync(quizData);
     }
 
+    public async Task DeleteQuizAsync(Quiz quiz)
+    {
+        await _quizRepository.DeleteAsync(quiz);
+    }
+
     public async Task<List<Quiz>>? GetAllQuizzes(Guid instructorId, Guid courseId)
     {
 

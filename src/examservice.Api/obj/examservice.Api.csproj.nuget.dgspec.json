@@ -13,8 +13,12 @@
         "packagesPath": "C:\\Users\\sohee\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sohee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -117,8 +122,12 @@
         "packagesPath": "C:\\Users\\sohee\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sohee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -126,6 +135,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -210,8 +220,12 @@
         "packagesPath": "C:\\Users\\sohee\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sohee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -219,6 +233,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -277,8 +292,12 @@
         "packagesPath": "C:\\Users\\sohee\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sohee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -286,6 +305,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -370,8 +390,12 @@
         "packagesPath": "C:\\Users\\sohee\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 23.2\\Components\\Offline Packages"
+        ],
         "configFilePaths": [
           "C:\\Users\\sohee\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 23.2.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -379,6 +403,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 23.2\\Components\\System\\Components\\Packages": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },

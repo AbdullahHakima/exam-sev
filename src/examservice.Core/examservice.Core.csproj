@@ -31,8 +31,6 @@
     <Folder Include="Features\Modules\Queries\Handlers\" />
     <Folder Include="Features\Modules\Queries\Models\" />
     <Folder Include="Features\Modules\Queries\Responses\" />
-    <Folder Include="Features\Quizzes\Commands\Models\Delete\" />
-    <Folder Include="Features\Quizzes\Commands\Models\Updated\" />
     <Folder Include="Features\Quizzes\Commands\Validators\" />
     <Folder Include="Features\Quizzes\Queries\Responses\" />
     <Folder Include="Features\Students\Commands\Models\Delete\" />

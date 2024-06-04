@@ -9,6 +9,7 @@ namespace examservice.Core.Mapping.QuizMapping
             CreateQuizMapping();
             ViewStudentQuizDetailsMapping();
             ViewInstructorQuizzesMapping();
+            UpdateQuizDetailsMapping();
         }
     }
 }

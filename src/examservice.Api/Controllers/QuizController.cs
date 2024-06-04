@@ -1,5 +1,7 @@
 ﻿using examservice.API.Base;
 using examservice.Core.Features.Quizzes.Commands.Models.Add;
+using examservice.Core.Features.Quizzes.Commands.Models.Delete;
+using examservice.Core.Features.Quizzes.Commands.Models.Updated;
 using examservice.Core.Features.Quizzes.Queries.Models;
 using examservice.Domain.Helpers.Dtos.Quiz;
 using examservice.Domain.MetaData;
@@ -54,5 +56,17 @@ public class QuizController : ApplicationController
         return NewResult(response);
     }
 
+    [HttpPut(Router.QuizRouting.UpdateQuizDetails)]
+    public async Task<IActionResult> UpdateQuizDeatilsAsync([FromRoute] UpdateQuizCommandDto updateDto, [FromForm] UpdateQuizDeatilsDto deatilsDto)
+    {
+        var response = await Mediator.Send(new UpdateQuizCommandModel { updateDto = updateDto, deatilsDto = deatilsDto });
+        return NewResult(response);
+    }
+    [HttpDelete(Router.QuizRouting.DeleteQuiz)]
+    public async Task<IActionResult> DeleteQuizAsync([FromRoute] DeleteQuizCommandDto deleteDto)
+    {
+        var response = await Mediator.Send(new DeleteQuizCommandModel { commandDto = deleteDto });
+        return NewResult(response);
+    }
 
 }

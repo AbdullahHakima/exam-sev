@@ -10,6 +10,7 @@ public interface IQuizService
     public Task<Quiz> GetQuizByIdAsync(Guid quizId);
     public Task<List<Quiz>> GetAllQuizzes(Guid instructorId, Guid courseId);
     public Task<List<Quiz>> GetIncomingCourseQuizzes(Guid courseId);
+    public Task DeleteQuizAsync(Quiz quiz);
 
     Task HandleEndedQuizzessAsync();
 }
