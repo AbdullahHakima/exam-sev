@@ -1,28 +1,34 @@
 ﻿using AutoMapper;
 using examservice.Core.Bases;
 using examservice.Core.Features.Quizzes.Queries.Models;
+using examservice.Domain.Entities;
 using examservice.Domain.Helpers.Dtos.Quiz;
 using examservice.Service.Interfaces;
 using MediatR;
+using Microsoft.Extensions.Caching.Distributed;
+using Newtonsoft.Json;
 
 namespace examservice.Core.Features.Quizzes.Queries.Handlers
 {
     public class QuizQueryHandlers : ResponseHandler, IRequestHandler<ViewStudentQuizQueryModel, Response<ViewStudentQuizDto>>
                                                     , IRequestHandler<ViewInstructorQuizzesQueryModel, Response<List<ViewInstructorQuizzesDto>>>
+                                                    , IRequestHandler<ViewInstructorQuizDetailsQueryModel, Response<ViewInstructorQuizDetailsDto>>
     {
         #region Fields
         private readonly IMapper _mapper;
         private readonly IQuizService _quizService;
         private readonly IStudentQuizzesService _studentQuizzesService;
+        private readonly IDistributedCache _cache;
 
         #endregion
         #region Constructors
 
-        public QuizQueryHandlers(IMapper mapper, IQuizService quizService, IStudentQuizzesService studentQuizzesService)
+        public QuizQueryHandlers(IMapper mapper, IQuizService quizService, IStudentQuizzesService studentQuizzesService, IDistributedCache cache)
         {
             _mapper = mapper;
             _quizService = quizService;
             _studentQuizzesService = studentQuizzesService;
+            _cache = cache;
         }
 
         #endregion
@@ -43,6 +49,32 @@ namespace examservice.Core.Features.Quizzes.Queries.Handlers
             if (inquiredQuizzes == null) return NotFound<List<ViewInstructorQuizzesDto>>("there is no quizzes yet");
             var mappedQuizzes = _mapper.Map<List<ViewInstructorQuizzesDto>>(inquiredQuizzes);
             return Success(mappedQuizzes);
+        }
+
+        public async Task<Response<ViewInstructorQuizDetailsDto>> Handle(ViewInstructorQuizDetailsQueryModel request, CancellationToken cancellationToken)
+        {
+            var inquiredQuiz = await _quizService.GetQuizByIdAsync(request.CommandDto.quizId);
+            if (inquiredQuiz == null) return NotFound<ViewInstructorQuizDetailsDto>("Quiz not founded");
+            foreach (var module in inquiredQuiz.Modules)
+            {
+                var questions = await GetQuestionsFromCache(module.Id);
+                if (questions != null)
+                {
+                    module.ModuleQuestions = questions.Select(q => new ModuleQuestion { Question = q }).ToList();
+                }
+            }
+            var mappedQuiz = _mapper.Map<ViewInstructorQuizDetailsDto>(inquiredQuiz);
+            return Success(mappedQuiz);
+        }
+        private async Task<List<Question>> GetQuestionsFromCache(Guid moduleId)
+        {
+            var cacheKey = $"ModuleQuestions:{moduleId}";
+            var serializedQuestions = await _cache.GetStringAsync(cacheKey);
+            if (string.IsNullOrEmpty(serializedQuestions))
+            {
+                return null;
+            }
+            return JsonConvert.DeserializeObject<List<Question>>(serializedQuestions);
         }
         #endregion
     }

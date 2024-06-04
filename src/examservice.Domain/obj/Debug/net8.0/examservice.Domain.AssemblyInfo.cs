@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("examservice.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ab8faeadf1c9b80ab423ec6db530a52a68454515")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e295b6511fda96c67af4fe90019a057c73803225")]
 [assembly: System.Reflection.AssemblyProductAttribute("examservice.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("examservice.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

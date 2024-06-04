@@ -54,6 +54,7 @@ public static class Router
         public const string ViewInstructorQuizzes = Prefix + "/All";
         public const string UpdateQuizDetails = Prefix + "/{quizId}/UpdateDetails";
         public const string DeleteQuiz = Prefix + "/{quizId}/DeleteQuiz";
+        public const string InstructorQuizDetails = Prefix + "/{quizId}/QuizDeatils";
     }
 
 }

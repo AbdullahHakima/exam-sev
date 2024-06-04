@@ -68,5 +68,13 @@ public class QuizController : ApplicationController
         var response = await Mediator.Send(new DeleteQuizCommandModel { commandDto = deleteDto });
         return NewResult(response);
     }
+    [HttpGet(Router.QuizRouting.InstructorQuizDetails)]
+    public async Task<IActionResult> ViewInstructorQuizDeatilsAsync([FromRoute] ViewInstructorQuizDetailsCommandDto dto)
+    {
+        var response = await Mediator.Send(new ViewInstructorQuizDetailsQueryModel { CommandDto = dto });
+        return NewResult(response);
+
+
+    }
 
 }
