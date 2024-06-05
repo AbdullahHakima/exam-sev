@@ -3,18 +3,18 @@
   "WorkspaceRootPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{EDB6F74F-15BD-4A3F-97D3-28F3D76FBB44}|..\\examservice.Infrastructure\\examservice.Infrastructure.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.infrastructure\\data\\migrationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.api\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|solutionrelative:controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\moduleservicedependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{EDB6F74F-15BD-4A3F-97D3-28F3D76FBB44}|..\\examservice.Infrastructure\\examservice.Infrastructure.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.infrastructure\\data\\migrationmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.api\\controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|solutionrelative:controllers\\quizcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\moduleservicedependencies.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -39,12 +39,8 @@
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MigrationManager.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Infrastructure\\Data\\MigrationManager.cs",
               "RelativeDocumentMoniker": "..\\examservice.Infrastructure\\Data\\MigrationManager.cs",
@@ -52,20 +48,20 @@
               "RelativeToolTip": "..\\examservice.Infrastructure\\Data\\MigrationManager.cs",
               "ViewState": "AQIAAAEAAAAAAAAAAAAswBoAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T19:00:41.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-05T19:00:41.525Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "QuizController.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Controllers\\QuizController.cs",
               "RelativeDocumentMoniker": "Controllers\\QuizController.cs",
               "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Controllers\\QuizController.cs",
               "RelativeToolTip": "Controllers\\QuizController.cs",
-              "ViewState": "AQIAAEEAAAAAAAAAAAA0wAAAAAAAAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAA0wE0AAAAEAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-05T18:33:57.681Z"
+              "WhenOpened": "2024-06-05T18:33:57.681Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -87,13 +83,13 @@
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAoAAAAAAAAAAAAiwEQAAAAAAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAFAAAAAaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-05T18:12:11.869Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ModuleServiceDependencies.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\ModuleServiceDependencies.cs",
               "RelativeDocumentMoniker": "..\\examservice.Service\\ModuleServiceDependencies.cs",

@@ -79,7 +79,6 @@ app.UseMiddleware<ErrorHandlerMiddleware>();
 app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
-app.UseStaticFiles();
 
 app.UseCors(CORS);
 
