@@ -13,6 +13,7 @@ namespace examservice.Core.Features.Quizzes.Queries.Handlers
     public class QuizQueryHandlers : ResponseHandler, IRequestHandler<ViewStudentQuizQueryModel, Response<ViewStudentQuizDto>>
                                                     , IRequestHandler<ViewInstructorQuizzesQueryModel, Response<List<ViewInstructorQuizzesDto>>>
                                                     , IRequestHandler<ViewInstructorQuizDetailsQueryModel, Response<ViewInstructorQuizDetailsDto>>
+                                                    , IRequestHandler<ViewStudentQuizzesQueryModel, Response<List<ViewStudentQuizzesDto>>>
     {
         #region Fields
         private readonly IMapper _mapper;
@@ -39,7 +40,8 @@ namespace examservice.Core.Features.Quizzes.Queries.Handlers
             var inquiredQuiz = await _studentQuizzesService.GetStudentQuizAsync(request.StudentQuizDto.quizId, request.StudentQuizDto.studentId);
             if (inquiredQuiz == null) return NotFound<ViewStudentQuizDto>("Quiz not founded");
             var mappedQuizDetails = _mapper.Map<ViewStudentQuizDto>(inquiredQuiz);
-            mappedQuizDetails.submission.Status = inquiredQuiz.AttemptStatus.ToString();
+            if (mappedQuizDetails.IsEnrolled)
+                mappedQuizDetails.submission.Status = inquiredQuiz.AttemptStatus.ToString();
             return Success(mappedQuizDetails);
         }
 
@@ -66,6 +68,15 @@ namespace examservice.Core.Features.Quizzes.Queries.Handlers
             var mappedQuiz = _mapper.Map<ViewInstructorQuizDetailsDto>(inquiredQuiz);
             return Success(mappedQuiz);
         }
+
+        public async Task<Response<List<ViewStudentQuizzesDto>>> Handle(ViewStudentQuizzesQueryModel request, CancellationToken cancellationToken)
+        {
+            var inquiredQuizzes = await _studentQuizzesService.GetStudentQuizzesAsync(request.Command.courseId, request.Command.studentId);
+            if (inquiredQuizzes == null) return NotFound<List<ViewStudentQuizzesDto>>("There no quizzes yet");
+            var mappedQuizzes = _mapper.Map<List<ViewStudentQuizzesDto>>(inquiredQuizzes);
+            return Success(mappedQuizzes);
+        }
+
         private async Task<List<Question>> GetQuestionsFromCache(Guid moduleId)
         {
             var cacheKey = $"ModuleQuestions:{moduleId}";

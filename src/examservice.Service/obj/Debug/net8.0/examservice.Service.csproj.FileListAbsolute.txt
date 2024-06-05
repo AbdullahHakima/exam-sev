@@ -15,6 +15,7 @@ C:\Users\sohee\source\repos\examservice.Service\obj\Debug\net8.0\examservice.Ser
 C:\Users\sohee\source\repos\examservice.Service\obj\Debug\net8.0\refint\examservice.Service.dll
 C:\Users\sohee\source\repos\examservice.Service\obj\Debug\net8.0\examservice.Service.pdb
 C:\Users\sohee\source\repos\examservice.Service\obj\Debug\net8.0\ref\examservice.Service.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\bin\Debug\net8.0\appsettings.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\bin\Debug\net8.0\examservice.Service.deps.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\bin\Debug\net8.0\examservice.Service.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\bin\Debug\net8.0\examservice.Service.pdb
@@ -27,9 +28,9 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\ex
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.AssemblyInfoInputs.cache
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.AssemblyInfo.cs
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.csproj.CoreCompileInputs.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.sourcelink.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examserv.0F37C867.Up2Date
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\refint\examservice.Service.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.pdb
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\ref\examservice.Service.dll
-C:\Users\sohee\source\repos\exam-sev\src\examservice.Service\obj\Debug\net8.0\examservice.Service.sourcelink.json

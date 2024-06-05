@@ -26,10 +26,10 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\ne
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.AssemblyInfo.cs
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.sourcelink.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examserv.3A732E13.Up2Date
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\refint\examservice.Infrastructure.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.pdb
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.genruntimeconfig.cache
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\ref\examservice.Infrastructure.dll
-C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\obj\Debug\net8.0\examservice.Infrastructure.sourcelink.json

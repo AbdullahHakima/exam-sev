@@ -18,3 +18,9 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Infrast
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Infrastructure.runtimeconfig.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Infrastructure.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Infrastructure.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\bin\Release\net8.0\examservice.Infrastructure.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\bin\Release\net8.0\examservice.Infrastructure.runtimeconfig.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\bin\Release\net8.0\examservice.Infrastructure.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\bin\Release\net8.0\examservice.Infrastructure.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\bin\Release\net8.0\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Infrastructure\bin\Release\net8.0\examservice.Domain.pdb

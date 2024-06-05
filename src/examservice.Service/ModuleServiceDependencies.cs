@@ -13,7 +13,6 @@ namespace examservice.Service
     {
         public static IServiceCollection AddServiceDependencies(this IServiceCollection services, IHostApplicationBuilder builder)
         {
-
             services.AddTransient<IStudentService, StudentService>();
             services.AddTransient<IQuestionService, QuestionService>();
             services.AddTransient<IExcelProsessorService, ExcelProsessorService>();

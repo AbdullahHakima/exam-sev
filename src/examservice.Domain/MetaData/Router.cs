@@ -51,10 +51,11 @@ public static class Router
         public const string EnrollToQuiz = Prefix + "/EnrollToQuiz";
         public const string SubmitQuiz = Prefix + "/Submit";
         public const string ViewStudentQuizDetails = Prefix + "/ViewQuizDetails";
-        public const string ViewInstructorQuizzes = Prefix + "/All";
+        public const string ViewInstructorQuizzes = Prefix + "/AllInstructorQuizzes";//For web
         public const string UpdateQuizDetails = Prefix + "/{quizId}/UpdateDetails";
         public const string DeleteQuiz = Prefix + "/{quizId}/DeleteQuiz";
         public const string InstructorQuizDetails = Prefix + "/{quizId}/QuizDeatils";
+        public const string ViewStudentQuizzes = Prefix + "/AllStudentQuizzes";// for mobile
     }
 
 }

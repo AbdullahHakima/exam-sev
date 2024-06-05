@@ -14,3 +14,6 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\obj\Release\net8.0\r
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Domain.deps.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Domain.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Domain.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\bin\Release\net8.0\examservice.Domain.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\bin\Release\net8.0\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\bin\Release\net8.0\examservice.Domain.pdb

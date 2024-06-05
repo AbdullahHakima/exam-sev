@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("examservice.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e295b6511fda96c67af4fe90019a057c73803225")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fbfc3f17677a87bee38959d2700e7c84c8caaa4")]
 [assembly: System.Reflection.AssemblyProductAttribute("examservice.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("examservice.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

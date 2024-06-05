@@ -15,3 +15,14 @@ C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\obj\Release\net8.0\ref
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Core.deps.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Core.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Api\out\examservice.Core.pdb
+C:\Users\sohee\source\repos\exam-sev\src\out\appsettings.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\appsettings.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Core.deps.json
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Core.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Core.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Domain.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Infrastructure.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Service.dll
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Domain.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Infrastructure.pdb
+C:\Users\sohee\source\repos\exam-sev\src\examservice.Core\bin\Release\net8.0\examservice.Service.pdb

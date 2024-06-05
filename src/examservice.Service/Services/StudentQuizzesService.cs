@@ -29,6 +29,16 @@ public class StudentQuizzesService : IStudentQuizzesService
                                                    .SingleOrDefault(sq => (sq.QuizId == quizId && sq.StudentId == studentId));
     }
 
+    public async Task<List<StudentQuizzes>> GetStudentQuizzesAsync(Guid couresId, Guid studentId)
+    {
+        var studentQuizzes = _studentQuizzesRepository.GetTableNoTracking()
+                                                       .Include(sq => sq.quiz)
+                                                            .ThenInclude(q => q.Instructor)
+                                                       .Where(sq => (sq.StudentId == studentId && sq.quiz.CourseId == couresId))
+                                                       .ToList();
+        return studentQuizzes;
+    }
+
     public async Task UpdateAttemptStatusAsync(Guid quizId, Guid studentId, QuizAttemptStatus status)
     {
         var studentQuiz = _studentQuizzesRepository.GetTableNoTracking().SingleOrDefault(sq => (sq.StudentId == studentId && sq.QuizId == quizId));

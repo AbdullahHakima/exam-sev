@@ -49,6 +49,7 @@ public class QuizController : ApplicationController
         var response = await Mediator.Send(new ViewStudentQuizQueryModel { StudentQuizDto = dto });
         return NewResult(response);
     }
+    //Should be for both mobile and web 
     [HttpGet(Router.QuizRouting.ViewInstructorQuizzes)]
     public async Task<IActionResult> ViewInstructorQuizzesAsync([FromRoute] GetInstructorQuizzesDto dto)
     {
@@ -73,8 +74,12 @@ public class QuizController : ApplicationController
     {
         var response = await Mediator.Send(new ViewInstructorQuizDetailsQueryModel { CommandDto = dto });
         return NewResult(response);
-
-
+    }
+    [HttpPost(Router.QuizRouting.ViewStudentQuizzes)]
+    public async Task<IActionResult> ViewStudentQuizzesAsync([FromBody] ViewStudentQuizzesCommandDto dto)
+    {
+        var response = await Mediator.Send(new ViewStudentQuizzesQueryModel { Command = dto });
+        return NewResult(response);
     }
 
 }
