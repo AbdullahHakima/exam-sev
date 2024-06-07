@@ -3,23 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.api\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|solutionrelative:controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC7BF339-D0EA-41C5-B391-0BA232FEB39C}|..\\examservice.Domain\\examservice.Domain.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.domain\\metadata\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7BE968D3-3BE5-430A-92C6-92AF352D3317}|..\\examservice.Core\\examservice.Core.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.core\\features\\questions\\queries\\handlers\\questionqueryhandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\reports\\commanreports\\headerreport.cs||{95027D70-C6B4-4736-8A48-AD3582187321}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\services\\questionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\interfaces\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.api\\controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{88D10198-9FA1-4178-BF70-550E7793D989}|examservice.Api.csproj|solutionrelative:controllers\\questioncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BE968D3-3BE5-430A-92C6-92AF352D3317}|..\\examservice.Core\\examservice.Core.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.core\\features\\questions\\queries\\handlers\\questionqueryhandlers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BE968D3-3BE5-430A-92C6-92AF352D3317}|..\\examservice.Core\\examservice.Core.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.core\\mapping\\questionmapping\\queries\\getquestionsbankmapping.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC7BF339-D0EA-41C5-B391-0BA232FEB39C}|..\\examservice.Domain\\examservice.Domain.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.domain\\helpers\\dtos\\question\\questionreportdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\services\\studentquizzesservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC7BF339-D0EA-41C5-B391-0BA232FEB39C}|..\\examservice.Domain\\examservice.Domain.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.domain\\metadata\\router.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{563FC374-01F0-4E11-B44C-57D56DE8DE19}|..\\examservice.Service\\examservice.Service.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.service\\interfaces\\iquestionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7BE968D3-3BE5-430A-92C6-92AF352D3317}|..\\examservice.Core\\examservice.Core.csproj|c:\\users\\sohee\\source\\repos\\exam-sev\\src\\examservice.core\\mapping\\questionoptionmapping\\optionprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -41,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -53,7 +62,92 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HeaderReport.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Reports\\CommanReports\\HeaderReport.cs",
+              "RelativeDocumentMoniker": "..\\examservice.Service\\Reports\\CommanReports\\HeaderReport.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Reports\\CommanReports\\HeaderReport.cs [Design]",
+              "RelativeToolTip": "..\\examservice.Service\\Reports\\CommanReports\\HeaderReport.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T17:53:26.843Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "QuestionService.cs",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\QuestionService.cs",
+              "RelativeDocumentMoniker": "..\\examservice.Service\\Services\\QuestionService.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\QuestionService.cs",
+              "RelativeToolTip": "..\\examservice.Service\\Services\\QuestionService.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAFsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T23:22:53.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "QuestionQueryHandlers.cs",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
+              "RelativeDocumentMoniker": "..\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
+              "RelativeToolTip": "..\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAlwCcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T23:10:38.357Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "QuestionController.cs",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Controllers\\QuestionController.cs",
+              "RelativeDocumentMoniker": "Controllers\\QuestionController.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Controllers\\QuestionController.cs",
+              "RelativeToolTip": "Controllers\\QuestionController.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAADgvzUAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T03:23:46.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GetQuestionsBankMapping.cs",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Mapping\\QuestionMapping\\Queries\\GetQuestionsBankMapping.cs",
+              "RelativeDocumentMoniker": "..\\examservice.Core\\Mapping\\QuestionMapping\\Queries\\GetQuestionsBankMapping.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Mapping\\QuestionMapping\\Queries\\GetQuestionsBankMapping.cs",
+              "RelativeToolTip": "..\\examservice.Core\\Mapping\\QuestionMapping\\Queries\\GetQuestionsBankMapping.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAABxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T11:48:15.059Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "QuestionReportDto.cs",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Domain\\Helpers\\Dtos\\Question\\QuestionReportDto.cs",
+              "RelativeDocumentMoniker": "..\\examservice.Domain\\Helpers\\Dtos\\Question\\QuestionReportDto.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Domain\\Helpers\\Dtos\\Question\\QuestionReportDto.cs",
+              "RelativeToolTip": "..\\examservice.Domain\\Helpers\\Dtos\\Question\\QuestionReportDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-07T12:14:11.789Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "StudentQuizzesService.cs",
+              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\StudentQuizzesService.cs",
+              "RelativeDocumentMoniker": "..\\examservice.Service\\Services\\StudentQuizzesService.cs",
+              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\StudentQuizzesService.cs",
+              "RelativeToolTip": "..\\examservice.Service\\Services\\StudentQuizzesService.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAAAuwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-06T23:23:14.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Router.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Domain\\MetaData\\Router.cs",
               "RelativeDocumentMoniker": "..\\examservice.Domain\\MetaData\\Router.cs",
@@ -61,64 +155,11 @@
               "RelativeToolTip": "..\\examservice.Domain\\MetaData\\Router.cs",
               "ViewState": "AQIAAAMAAAAAAAAAAIAzwBcAAABWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T03:25:48.63Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-07T03:25:48.63Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "QuestionController.cs",
-              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Controllers\\QuestionController.cs",
-              "RelativeDocumentMoniker": "Controllers\\QuestionController.cs",
-              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Api\\Controllers\\QuestionController.cs",
-              "RelativeToolTip": "Controllers\\QuestionController.cs",
-              "ViewState": "AQIAACsAAAAAAAAAAAAAADEAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T03:23:46.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "StudentQuizzesService.cs",
-              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\StudentQuizzesService.cs",
-              "RelativeDocumentMoniker": "..\\examservice.Service\\Services\\StudentQuizzesService.cs",
-              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\StudentQuizzesService.cs",
-              "RelativeToolTip": "..\\examservice.Service\\Services\\StudentQuizzesService.cs",
-              "ViewState": "AQIAABwAAAAAAAAAAAAUwCQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:23:14.545Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "QuestionService.cs",
-              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\QuestionService.cs",
-              "RelativeDocumentMoniker": "..\\examservice.Service\\Services\\QuestionService.cs",
-              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Services\\QuestionService.cs",
-              "RelativeToolTip": "..\\examservice.Service\\Services\\QuestionService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAsAAAAnAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:22:53.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "QuestionQueryHandlers.cs",
-              "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
-              "RelativeDocumentMoniker": "..\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
-              "ToolTip": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
-              "RelativeToolTip": "..\\examservice.Core\\Features\\Questions\\Queries\\Handlers\\QuestionQueryHandlers.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAIBDwB4AAABiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:10:38.357Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "IQuestionService.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Service\\Interfaces\\IQuestionService.cs",
               "RelativeDocumentMoniker": "..\\examservice.Service\\Interfaces\\IQuestionService.cs",
@@ -126,12 +167,11 @@
               "RelativeToolTip": "..\\examservice.Service\\Interfaces\\IQuestionService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:21:33.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T23:21:33.775Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "OptionProfile.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Mapping\\QuestionOptionMapping\\OptionProfile.cs",
               "RelativeDocumentMoniker": "..\\examservice.Core\\Mapping\\QuestionOptionMapping\\OptionProfile.cs",
@@ -139,12 +179,11 @@
               "RelativeToolTip": "..\\examservice.Core\\Mapping\\QuestionOptionMapping\\OptionProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:19:55.138Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T23:19:55.138Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "OptionsReportMapping.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Mapping\\QuestionOptionMapping\\Queries\\OptionsReportMapping.cs",
               "RelativeDocumentMoniker": "..\\examservice.Core\\Mapping\\QuestionOptionMapping\\Queries\\OptionsReportMapping.cs",
@@ -152,12 +191,11 @@
               "RelativeToolTip": "..\\examservice.Core\\Mapping\\QuestionOptionMapping\\Queries\\OptionsReportMapping.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:17:56.136Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T23:17:56.136Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "QuestionProfile.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Mapping\\QuestionMapping\\QuestionProfile.cs",
               "RelativeDocumentMoniker": "..\\examservice.Core\\Mapping\\QuestionMapping\\QuestionProfile.cs",
@@ -165,12 +203,11 @@
               "RelativeToolTip": "..\\examservice.Core\\Mapping\\QuestionMapping\\QuestionProfile.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:15:23.901Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T23:15:23.901Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "GetQuestionsBankQueryModel.cs",
               "DocumentMoniker": "C:\\Users\\sohee\\source\\repos\\exam-sev\\src\\examservice.Core\\Features\\Questions\\Queries\\Models\\GetQuestionsBankQueryModel.cs",
               "RelativeDocumentMoniker": "..\\examservice.Core\\Features\\Questions\\Queries\\Models\\GetQuestionsBankQueryModel.cs",
@@ -178,8 +215,7 @@
               "RelativeToolTip": "..\\examservice.Core\\Features\\Questions\\Queries\\Models\\GetQuestionsBankQueryModel.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T23:07:39.246Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-06T23:07:39.246Z"
             }
           ]
         }

@@ -30,16 +30,6 @@ namespace examservice.Core.Features.Questions.Queries.Handlers
             var inquiredQuestions = await _questionService.GetAllQuestionsAsync(request.CourseId);
             if (inquiredQuestions.Count == 0) return NotFound<string>("there is no questions yet");
             var mappedQuestions = _mapper.Map<List<QuestionReportDto>>(inquiredQuestions);
-            for (int i = 0; i < mappedQuestions.Count; i++)
-            {
-                var mappedQuestion = mappedQuestions[i];
-                var originalQuestion = inquiredQuestions[i];
-
-                mappedQuestion.Answers = originalQuestion.Options
-                                            .Where(o => o.IsCorrect)
-                                            .Select(o => o.Text)
-                                            .ToList();
-            }
             var course = await _courseService.GetByIdAsync(request.CourseId);
             var questionBank = new QuestionsBankReportDto
             {

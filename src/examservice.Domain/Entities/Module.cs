@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace examservice.Domain.Entities;
 
-public class Module
+public class Module 
 {
     [Key]
     public Guid Id { get; set; }

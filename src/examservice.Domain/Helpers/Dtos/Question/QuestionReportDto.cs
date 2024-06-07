@@ -9,6 +9,9 @@
         public string option2 { get; set; }
         public string option3 { get; set; }
         public string option4 { get; set; }
-        public List<string> Answers { get; set; }
+        public bool option1Answer { get; set; }
+        public bool option2Answer { get; set; }
+        public bool option3Answer { get; set; }
+        public bool option4Answer { get; set; }
     }
 }
