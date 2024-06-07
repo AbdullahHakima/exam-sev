@@ -15,7 +15,11 @@ namespace examservice.Core.Mapping.QuestionMapping
                 .ForMember(dest => dest.option2, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(1).Text))
                 .ForMember(dest => dest.option3, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(2).Text ?? string.Empty))
                 .ForMember(dest => dest.option4, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(3).Text ?? string.Empty))
-                .ForMember(dest => dest.option4, opt => opt.Ignore());
+                .ForMember(dest => dest.option1Answer, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(0).IsCorrect))
+                .ForMember(dest => dest.option2Answer, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(1).IsCorrect))
+                .ForMember(dest => dest.option3Answer, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(2).IsCorrect))
+                .ForMember(dest => dest.option4Answer, opt => opt.MapFrom(src => src.Options.ElementAtOrDefault(3).IsCorrect));
+
         }
     }
 }
