@@ -3,4 +3,5 @@
 public interface IScheduledTaskService
 {
     Task UpdateSubmissionForEndedQuizzes();
+    Task GenerateQuizResultFileForEndedQuizzes();
 }

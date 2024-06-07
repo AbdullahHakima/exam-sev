@@ -2,6 +2,7 @@
 using examservice.Core.Features.Questions.Commands.Models.Add;
 using examservice.Core.Features.Questions.Commands.Models.Remove;
 using examservice.Core.Features.Questions.Commands.Models.Update;
+using examservice.Core.Features.Questions.Queries.Models;
 using examservice.Domain.Helpers.Dtos.Question;
 using examservice.Domain.MetaData;
 using Microsoft.AspNetCore.Mvc;
@@ -43,6 +44,13 @@ public class QuestionController : ApplicationController
     public async Task<IActionResult> RemoveBatchQuestions([FromForm] List<Guid> questionsIds)
     {
         var response = await Mediator.Send(new RemoveBatchQuestionsCommandModel { questionIds = questionsIds });
+        return NewResult(response);
+    }
+
+    [HttpGet(Router.QuestionRouting.GenerateQuestionsBankFile)]
+    public async Task<IActionResult> GenerateQuestionsBankFileAsync([FromRoute] Guid courseId)
+    {
+        var response = await Mediator.Send(new GetQuestionsBankQueryModel { CourseId = courseId });
         return NewResult(response);
     }
 }

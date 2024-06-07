@@ -8,6 +8,7 @@ namespace examservice.Core.Mapping.QuestionMapping
         {
             AddQuestionMapping();
             UpdateQuestionMapping();
+            GetQuestionsBankMapping();
         }
     }
 }

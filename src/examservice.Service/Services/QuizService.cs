@@ -11,14 +11,17 @@ public class QuizService : IQuizService
     #region Fields
     private readonly IQuizRepository _quizRepository;
     private readonly ISubmissionService _submissionService;
+    private readonly IStudentQuizzesService _studentQuizzesService;
+
 
     #endregion
 
     #region Constructors
-    public QuizService(IQuizRepository quizRepository, ISubmissionService submissionService)
+    public QuizService(IQuizRepository quizRepository, ISubmissionService submissionService, IStudentQuizzesService studentQuizzesService)
     {
         _quizRepository = quizRepository;
         _submissionService = submissionService;
+        _studentQuizzesService = studentQuizzesService;
     }
     #endregion
 
@@ -33,6 +36,7 @@ public class QuizService : IQuizService
     {
         await _quizRepository.DeleteAsync(quiz);
     }
+
 
     public async Task<List<Quiz>>? GetAllQuizzes(Guid instructorId, Guid courseId)
     {
@@ -57,6 +61,8 @@ public class QuizService : IQuizService
     {
         return _quizRepository.GetTableNoTracking()
                               .Include(q => q.Instructor)
+                              .Include(q => q.Course)
+                              .Include(q => q.StudentQuizzes)
                               .Include(q => q.Modules)
                                 .ThenInclude(qm => qm.ModuleQuestions)
                                     .ThenInclude(mq => mq.Question)
@@ -73,6 +79,7 @@ public class QuizService : IQuizService
         foreach (var quiz in endedQuizzes)
         {
             await _submissionService.UpdateStudentSubmissionAsync(quiz.Id);
+            await _studentQuizzesService.GenerateQuizResultPdfFileAsync(quiz);
         }
 
     }

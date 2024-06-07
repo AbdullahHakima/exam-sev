@@ -1,3 +1,4 @@
+using DevExpress.AspNetCore;
 using examservice.Core;
 using examservice.Core.Middlewares;
 using examservice.Infrastructure;
@@ -5,6 +6,7 @@ using examservice.Infrastructure.Data;
 using examservice.Service;
 using Hangfire;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.FileProviders;
 using Serilog;
 using System.Text.Json.Serialization;
 var builder = WebApplication.CreateBuilder(args);
@@ -80,13 +82,21 @@ app.UseSerilogRequestLogging();
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(Path.Combine(app.Environment.ContentRootPath, "node_modules")),
+    RequestPath = "/node_modules"
+});
 
 app.UseCors(CORS);
-
+app.UseDevExpressControls();
 app.UseAuthorization();
 
 app.MapControllers();
 
-app.MapHangfireDashboard();
+app.UseHangfireDashboard("/hangfire", new DashboardOptions
+{
+    Authorization = new[] { new AllowAllDashboardAuthorizationFilter() }
+});
 
 app.Run();

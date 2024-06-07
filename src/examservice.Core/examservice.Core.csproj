@@ -22,8 +22,6 @@
 
   <ItemGroup>
     <Folder Include="Features\Questions\Commands\Validator\" />
-    <Folder Include="Features\Questions\Queries\Handlers\" />
-    <Folder Include="Features\Questions\Queries\Models\" />
     <Folder Include="Features\Questions\Queries\Responses\" />
     <Folder Include="Features\Modules\Commands\Models\Delete\" />
     <Folder Include="Features\Modules\Commands\Models\Update\" />
@@ -38,8 +36,6 @@
     <Folder Include="Features\Students\Queries\Handlers\" />
     <Folder Include="Features\Students\Queries\Models\" />
     <Folder Include="Features\Students\Queries\Response\" />
-    <Folder Include="Mapping\QuestionMapping\Queries\" />
-    <Folder Include="Mapping\StudentMapping\Queries\" />
   </ItemGroup>
 
 </Project>

@@ -21,6 +21,7 @@ public static class Router
         public const string UpdateQuestion = Prefix + "/{questionId}";
         public const string DeleteQuestion = Prefix + "/{questionId}";
         public const string DeleteBatchQuestions = Prefix + "/DeleteBatchQuestions";
+        public const string GenerateQuestionsBankFile = Prefix + "/QuestionsBankFile";
     }
 
 

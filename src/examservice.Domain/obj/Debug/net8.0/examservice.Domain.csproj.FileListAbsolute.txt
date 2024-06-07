@@ -1,15 +1,3 @@
-C:\Users\sohee\source\repos\examservice.Domain\bin\Debug\net8.0\examservice.Domain.deps.json
-C:\Users\sohee\source\repos\examservice.Domain\bin\Debug\net8.0\examservice.Domain.dll
-C:\Users\sohee\source\repos\examservice.Domain\bin\Debug\net8.0\examservice.Domain.pdb
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.AssemblyInfoInputs.cache
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.AssemblyInfo.cs
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.csproj.CoreCompileInputs.cache
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.dll
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\refint\examservice.Domain.dll
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.pdb
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\ref\examservice.Domain.dll
-C:\Users\sohee\source\repos\examservice.Domain\obj\Debug\net8.0\examservice.Domain.csproj.AssemblyReference.cache
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\bin\Debug\net8.0\examservice.Domain.deps.json
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\bin\Debug\net8.0\examservice.Domain.dll
 C:\Users\sohee\source\repos\exam-sev\src\examservice.Domain\bin\Debug\net8.0\examservice.Domain.pdb

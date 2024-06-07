@@ -12,6 +12,7 @@ namespace examservice.Core.Mapping.QuizMapping
             UpdateQuizDetailsMapping();
             ViewInstructorQuizDetailsMapping();
             ViewStudentQuizzesMapping();
+            ViewQuizResultsMapping();
         }
     }
 }

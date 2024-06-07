@@ -8,6 +8,7 @@ namespace examservice.Core.Mapping.QuestionOptionMapping
         {
             AddQuestionOprionMapping();
             ViewOptionMapping();
+            OptionsReportMapping();
         }
     }
 }

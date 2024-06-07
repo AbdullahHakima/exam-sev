@@ -29,14 +29,18 @@ public class ExcelProsessorService : IExcelProsessorService
                     Text = worksheet.Cells[row, 1].Value?.ToString(),
                     Type = questionType,
                     Options = new List<Option>(),
-                    Points = decimal.Parse(worksheet.Cells[row, 7].Value?.ToString() ?? "1"), // Provide default value if cell value is null
-                    Duration = decimal.Parse(worksheet.Cells[row, 8].Value?.ToString() ?? "1"),
-                    ImageLink = worksheet.Cells[row, 9].Value?.ToString() ?? "no image",
-                    CourseId = courseId // Set courseId passed from the front end,Now it hard code for testing
+                    Points = decimal.Parse(worksheet.Cells[row, 8].Value?.ToString() ?? "1"), // Provide default value if cell value is null
+                    Duration = decimal.Parse(worksheet.Cells[row, 9].Value?.ToString() ?? "1"),
+                    ImageLink = worksheet.Cells[row, 10].Value?.ToString() ?? "no image",
+                    CourseId = courseId // Set courseId passed from the front end, now hard-coded for testing
                 };
 
                 // Determine the number of options based on the question type
                 int numOptions = (questionType == QuestionType.TrueFalse) ? 2 : 4;
+
+                // Get correct answers, which may be multiple and comma-separated
+                string correctAnswers = worksheet.Cells[row, 7].Value?.ToString();
+                var correctAnswersSet = new HashSet<string>(correctAnswers?.Split(',').Select(a => a.Trim()), StringComparer.OrdinalIgnoreCase);
 
                 // Fill options
                 for (int optionIndex = 0; optionIndex < numOptions; optionIndex++)
@@ -46,9 +50,8 @@ public class ExcelProsessorService : IExcelProsessorService
                     {
                         Option option = new Option { Text = optionText };
 
-                        // Check if this option matches the correct answer specified in the Excel sheet
-                        string correctAnswer = worksheet.Cells[row, 8].Value?.ToString();
-                        if (!string.IsNullOrEmpty(correctAnswer) && optionText.Equals(correctAnswer, StringComparison.OrdinalIgnoreCase))
+                        // Check if this option is in the set of correct answers
+                        if (correctAnswersSet.Contains(optionText))
                         {
                             option.IsCorrect = true;
                         }
@@ -62,5 +65,6 @@ public class ExcelProsessorService : IExcelProsessorService
         }
         return importedQuestionList;
     }
+
 
 }

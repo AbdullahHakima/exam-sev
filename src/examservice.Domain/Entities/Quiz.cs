@@ -20,6 +20,8 @@ public class Quiz
 
     public QuizStatus Status { get; set; }
 
+    public string? QuizResultsPath { get; set; }
+
     public ICollection<Module> Modules { get; set; }
     [ForeignKey(nameof(InstructorId))]
     public Guid InstructorId { get; set; }
@@ -28,4 +30,5 @@ public class Quiz
     [ForeignKey(nameof(CourseId))]
     public Guid CourseId { get; set; }
     public Course Course { get; set; }
+
 }
