@@ -326,6 +326,26 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DevExpress.AspNetCore.Reporting": {
+              "target": "Package",
+              "version": "[23.2.5, )"
+            },
+            "DevExpress.Data": {
+              "target": "Package",
+              "version": "[23.2.6, )"
+            },
+            "DevExpress.Drawing": {
+              "target": "Package",
+              "version": "[23.2.5, )"
+            },
+            "DevExpress.Drawing.Skia": {
+              "target": "Package",
+              "version": "[23.2.5, )"
+            },
+            "DevExpress.Reporting.Core": {
+              "target": "Package",
+              "version": "[23.2.5, )"
+            },
             "EPPlus": {
               "target": "Package",
               "version": "[7.1.3, )"

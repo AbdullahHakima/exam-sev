@@ -16,6 +16,11 @@ public class QuizRepository : GenericRepositoryAsync<Quiz>, IQuizRepository
 
     public async Task<List<Quiz>> GetEndedQuizzesAsync()
     {
-        return await _quizs.Where(q => q.ClosedAt.ToLocalTime() < DateTime.Now).ToListAsync();
+        return await _quizs.Include(q => q.Course)
+                           .Include(q => q.Instructor)
+                           .Include(q => q.Modules)
+                           .Include(q => q.StudentQuizzes)
+                           .Where(q => q.ClosedAt.ToLocalTime() < DateTime.Now)
+                           .ToListAsync();
     }
 }

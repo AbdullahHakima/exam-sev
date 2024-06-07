@@ -10,6 +10,7 @@ public interface IStudentQuizzesService
     Task AddStudentsToQuizAsync(List<StudentQuizzes> studentQuizzes);
     Task<StudentQuizzes> GetStudentQuizAsync(Guid quizId, Guid studentId);
     Task UpdateStudentQuizAsync(StudentQuizzes studentQuizze);
+    Task GenerateQuizResultPdfFileAsync(Quiz quiz);
 
     Task<List<StudentQuizzes>> GetStudentQuizzesAsync(Guid couresId, Guid studentId);
 }

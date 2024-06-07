@@ -1,4 +1,6 @@
-﻿using examservice.Service.Interfaces;
+﻿using DevExpress.AspNetCore;
+using DevExpress.AspNetCore.Reporting;
+using examservice.Service.Interfaces;
 using examservice.Service.Services;
 using Hangfire;
 using Hangfire.PostgreSql;
@@ -34,7 +36,8 @@ namespace examservice.Service
                     postgreSqlOptions.UseNpgsqlConnection(builder.Configuration.GetConnectionString("DefaultConnection"));
                 }, new PostgreSqlStorageOptions
                 {
-                    SchemaName = "ScheduledTasks"
+                    SchemaName = "ScheduledTasks",
+                    DistributedLockTimeout = TimeSpan.FromSeconds(60)
                 }));
 
             services.AddHangfireServer();
@@ -49,10 +52,18 @@ namespace examservice.Service
                     "UpdateStudentSubmission",
                     () => serviceProvider.GetRequiredService<IScheduledTaskService>().UpdateSubmissionForEndedQuizzes(),
                     Cron.Hourly());  // Cron expression for every hour
+                recurringJobManager.AddOrUpdate(
+                    "GenerateQuizResultPdfFile",
+                    () => serviceProvider.GetRequiredService<IScheduledTaskService>().GenerateQuizResultFileForEndedQuizzes(),
+                    Cron.Hourly());  // Cron expression for every hour
             }
+            services.AddDevExpressControls();
+            services.ConfigureReportingServices(configurator =>
+            {
+                configurator.DisableCheckForCustomControllers();
+            });
 
             return services;
         }
-
     }
 }

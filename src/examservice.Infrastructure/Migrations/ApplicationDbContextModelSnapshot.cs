@@ -34,7 +34,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("courses", (string)null);
+                    b.ToTable("courses");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Instructor", b =>
@@ -49,7 +49,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Instructors", (string)null);
+                    b.ToTable("Instructors");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.InstructorCourses", b =>
@@ -64,7 +64,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("InstructorCourses", (string)null);
+                    b.ToTable("InstructorCourses");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Module", b =>
@@ -90,7 +90,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("QuizId");
 
-                    b.ToTable("Modules", (string)null);
+                    b.ToTable("Modules");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.ModuleQuestion", b =>
@@ -105,7 +105,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("ModuleQuestion", (string)null);
+                    b.ToTable("ModuleQuestion");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Option", b =>
@@ -128,7 +128,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("QuestionId");
 
-                    b.ToTable("Options", (string)null);
+                    b.ToTable("Options");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Question", b =>
@@ -161,7 +161,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("Questions", (string)null);
+                    b.ToTable("Questions");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Quiz", b =>
@@ -198,6 +198,9 @@ namespace examservice.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("QuizResultsPath")
+                        .HasColumnType("text");
+
                     b.Property<DateTime>("StartedDate")
                         .HasColumnType("timestamp with time zone");
 
@@ -213,7 +216,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("InstructorId");
 
-                    b.ToTable("Quizs", (string)null);
+                    b.ToTable("Quizs");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Student", b =>
@@ -232,7 +235,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Students", (string)null);
+                    b.ToTable("Students");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.StudentCourses", b =>
@@ -247,7 +250,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("StudentCourses", (string)null);
+                    b.ToTable("StudentCourses");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.StudentQuizzes", b =>
@@ -278,7 +281,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("SubmissionId");
 
-                    b.ToTable("StudentQuizzes", (string)null);
+                    b.ToTable("StudentQuizzes");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.Submission", b =>
@@ -311,7 +314,7 @@ namespace examservice.Infrastructure.Migrations
 
                     b.HasIndex("StudentId");
 
-                    b.ToTable("Submissions", (string)null);
+                    b.ToTable("Submissions");
                 });
 
             modelBuilder.Entity("examservice.Domain.Entities.InstructorCourses", b =>

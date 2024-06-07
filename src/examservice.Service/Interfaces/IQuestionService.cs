@@ -1,4 +1,5 @@
 ﻿using examservice.Domain.Entities;
+using examservice.Domain.Helpers.Dtos.Question;
 
 namespace examservice.Service.Interfaces;
 
@@ -13,4 +14,5 @@ public interface IQuestionService
     public Task DeleteQuestionAsync(Question question);
     public Task DeleteBulkQuestionsAsync(List<Question> updatedQuestions);
     public Task<Question?> GetQuestionByName(string name, Guid courseId);
+    public Task<string?> GenereateQuestionsBankPdfFile(QuestionsBankReportDto bankDtos);
 }

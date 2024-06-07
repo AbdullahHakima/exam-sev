@@ -16,5 +16,7 @@ namespace examservice.Domain.Helpers.Dtos.Quiz
         public double Duration { get; set; }
         public QuizStatus Status { get; set; }
         public List<ViewGeneratedModuleDto> Modules { get; set; }
+        public string QuizResultFilePath { get; set; }
+
     }
 }

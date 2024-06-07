@@ -17,9 +17,13 @@ public class ScheduledTaskService : IScheduledTaskService
     }
     #endregion
 
-    #region
+    #region Methods
 
 
+    public async Task GenerateQuizResultFileForEndedQuizzes()
+    {
+        await _quizService.HandleEndedQuizzessAsync();
+    }
     public async Task UpdateSubmissionForEndedQuizzes()
     {
         await _quizService.HandleEndedQuizzessAsync();
