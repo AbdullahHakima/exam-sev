@@ -9,6 +9,7 @@ namespace examservice.Core.Mapping.QuizMapping
         {
             CreateMap<StudentQuizzes, ViewStudentQuizDto>()
                 .ForMember(dest => dest.StartedDate, opt => opt.MapFrom(src => src.quiz.StartedDate))
+                .ForMember(dest => dest.QuizId, opt => opt.MapFrom(src => src.quiz.Id))
                 .ForMember(dest => dest.ClosedAt, opt => opt.MapFrom(src => src.quiz.ClosedAt))
                 .ForMember(dest => dest.InstructorName, opt => opt.MapFrom(src => src.quiz.Instructor.DisplayName))
                 .ForMember(dest => dest.Duration, opt => opt.MapFrom(src => src.quiz.Duration))

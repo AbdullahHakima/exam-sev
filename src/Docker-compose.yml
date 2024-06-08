@@ -1,6 +1,6 @@
 version: '3.4'
 services:
-  devexpress:
+  examservice:
     build:
       context: ./  # Point to the parent directory of the Dockerfile
       dockerfile: Dockerfile

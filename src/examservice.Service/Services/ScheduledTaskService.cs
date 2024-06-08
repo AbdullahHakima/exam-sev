@@ -22,11 +22,11 @@ public class ScheduledTaskService : IScheduledTaskService
 
     public async Task GenerateQuizResultFileForEndedQuizzes()
     {
-        await _quizService.HandleEndedQuizzessAsync();
+        await _quizService.HandleEndedQuizzessResultsAsync();
     }
     public async Task UpdateSubmissionForEndedQuizzes()
     {
-        await _quizService.HandleEndedQuizzessAsync();
+        await _quizService.HandleEndedQuizzessSubmissionAsync();
     }
     #endregion
 }

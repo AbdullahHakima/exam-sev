@@ -44,19 +44,24 @@ public static class Router
         public const string GenerateModuels = Prefix + "/GenerateModules";
     }
 
-    public static class QuizRouting
+    public static class QuizWebRouting
     {
         public const string Prefix = GeneralRule + "courses/{courseId}/instructors/{instructorId}/quizzes";
         public const string CreateQuiz = Prefix + "/createquiz";
         public const string PublishQuiz = Prefix + "/{quizId}/publish";
-        public const string EnrollToQuiz = Prefix + "/EnrollToQuiz";
-        public const string SubmitQuiz = Prefix + "/Submit";
-        public const string ViewStudentQuizDetails = Prefix + "/ViewQuizDetails";
         public const string ViewInstructorQuizzes = Prefix + "/AllInstructorQuizzes";//For web
         public const string UpdateQuizDetails = Prefix + "/{quizId}/UpdateDetails";
         public const string DeleteQuiz = Prefix + "/{quizId}/DeleteQuiz";
         public const string InstructorQuizDetails = Prefix + "/{quizId}/QuizDeatils";
+    }
+    public static class QuizMobileRouting
+    {
+        public const string Prefix = GeneralRule + "quizzes";
+        public const string EnrollToQuiz = Prefix + "/EnrollToQuiz";
+        public const string SubmitQuiz = Prefix + "/Submit";
+        public const string ViewStudentQuizDetails = Prefix + "/ViewQuizDetails";
         public const string ViewStudentQuizzes = Prefix + "/AllStudentQuizzes";// for mobile
+
     }
 
 }
