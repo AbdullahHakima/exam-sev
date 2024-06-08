@@ -12,7 +12,7 @@ namespace ExamService.API.Controllers;
 [ApiController]
 public class QuizController : ApplicationController
 {
-    [HttpPost(Router.QuizRouting.CreateQuiz)]
+    [HttpPost(Router.QuizWebRouting.CreateQuiz)]
     public async Task<IActionResult> CreateQuizAsync([FromRoute] Guid instructorId, [FromRoute] Guid courseId, [FromForm] CreateQuizDto quizDto)
     {
         var response = await Mediator.Send(new CreateQuizCommandModel
@@ -24,58 +24,58 @@ public class QuizController : ApplicationController
         return NewResult(response);
     }
 
-    [HttpPost(Router.QuizRouting.PublishQuiz)]
+    [HttpPost(Router.QuizWebRouting.PublishQuiz)]
     public async Task<IActionResult> PublishQuizAsync([FromRoute] Guid courseId, [FromRoute] Guid quizId, [FromForm] PublishQuizDto quizDto)
     {
         var response = await Mediator.Send(new PublishQuizCommandModel { quizId = quizId, courseId = courseId, publishQuizDto = quizDto });
         return NewResult(response);
     }
 
-    [HttpPost(Router.QuizRouting.EnrollToQuiz)]
+    [HttpPost(Router.QuizMobileRouting.EnrollToQuiz)]
     public async Task<IActionResult> EnrollToQuizAsync([FromBody] EnrollToQuizDto enrollDto)
     {
         var response = await Mediator.Send(new EnrollToQuizCommanModel { enrollDto = enrollDto });
         return NewResult(response);
     }
-    [HttpPost(Router.QuizRouting.SubmitQuiz)]
+    [HttpPost(Router.QuizMobileRouting.SubmitQuiz)]
     public async Task<IActionResult> SubmitQuizAsync([FromBody] SubmitQuizDto submitDto)
     {
         var response = await Mediator.Send(new SubmitQuizCommandModel { submitDto = submitDto });
         return NewResult(response);
     }
-    [HttpPost(Router.QuizRouting.ViewStudentQuizDetails)]
+    [HttpPost(Router.QuizMobileRouting.ViewStudentQuizDetails)]
     public async Task<IActionResult> ViewStudentQuizDetailsAsync([FromBody] GetStudentQuizDto dto)
     {
         var response = await Mediator.Send(new ViewStudentQuizQueryModel { StudentQuizDto = dto });
         return NewResult(response);
     }
     //Should be for both mobile and web 
-    [HttpGet(Router.QuizRouting.ViewInstructorQuizzes)]
+    [HttpGet(Router.QuizWebRouting.ViewInstructorQuizzes)]
     public async Task<IActionResult> ViewInstructorQuizzesAsync([FromRoute] GetInstructorQuizzesDto dto)
     {
         var response = await Mediator.Send(new ViewInstructorQuizzesQueryModel { instructorQuizzesDto = dto });
         return NewResult(response);
     }
 
-    [HttpPut(Router.QuizRouting.UpdateQuizDetails)]
+    [HttpPut(Router.QuizWebRouting.UpdateQuizDetails)]
     public async Task<IActionResult> UpdateQuizDeatilsAsync([FromRoute] UpdateQuizCommandDto updateDto, [FromForm] UpdateQuizDeatilsDto deatilsDto)
     {
         var response = await Mediator.Send(new UpdateQuizCommandModel { updateDto = updateDto, deatilsDto = deatilsDto });
         return NewResult(response);
     }
-    [HttpDelete(Router.QuizRouting.DeleteQuiz)]
+    [HttpDelete(Router.QuizWebRouting.DeleteQuiz)]
     public async Task<IActionResult> DeleteQuizAsync([FromRoute] DeleteQuizCommandDto deleteDto)
     {
         var response = await Mediator.Send(new DeleteQuizCommandModel { commandDto = deleteDto });
         return NewResult(response);
     }
-    [HttpGet(Router.QuizRouting.InstructorQuizDetails)]
+    [HttpGet(Router.QuizWebRouting.InstructorQuizDetails)]
     public async Task<IActionResult> ViewInstructorQuizDeatilsAsync([FromRoute] ViewInstructorQuizDetailsCommandDto dto)
     {
         var response = await Mediator.Send(new ViewInstructorQuizDetailsQueryModel { CommandDto = dto });
         return NewResult(response);
     }
-    [HttpPost(Router.QuizRouting.ViewStudentQuizzes)]
+    [HttpPost(Router.QuizMobileRouting.ViewStudentQuizzes)]
     public async Task<IActionResult> ViewStudentQuizzesAsync([FromBody] ViewStudentQuizzesCommandDto dto)
     {
         var response = await Mediator.Send(new ViewStudentQuizzesQueryModel { Command = dto });

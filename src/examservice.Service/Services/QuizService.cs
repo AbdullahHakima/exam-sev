@@ -73,7 +73,7 @@ public class QuizService : IQuizService
 
 
 
-    public async Task HandleEndedQuizzessAsync()
+    public async Task HandleEndedQuizzessSubmissionAsync()
     {
         var endedQuizzes = await _quizRepository.GetEndedQuizzesAsync();
         foreach (var quiz in endedQuizzes)
@@ -84,6 +84,15 @@ public class QuizService : IQuizService
 
     }
 
+    public async Task HandleEndedQuizzessResultsAsync()
+    {
+        var endedQuizzes = await _quizRepository.GetEndedQuizzesAsync();
+        foreach (var quiz in endedQuizzes)
+        {
+            await _studentQuizzesService.GenerateQuizResultPdfFileAsync(quiz);
+        }
+
+    }
     public async Task UpdateQuizAsync(Quiz updatedQuizData)
     {
         await _quizRepository.UpdateAsync(updatedQuizData);

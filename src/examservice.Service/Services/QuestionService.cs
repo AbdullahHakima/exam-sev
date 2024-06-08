@@ -109,6 +109,7 @@ public class QuestionService : IQuestionService
             {
                 return null;
             }
+
             // Generate a unique file name
             string fileName = $"{bankDto.CourseName}_QuestionsBank.pdf";
             string directoryPath = Path.Combine(_hostingEnvironment.WebRootPath, "CoursesQuestionsBank");
@@ -127,18 +128,20 @@ public class QuestionService : IQuestionService
                 report.ExportToPdf(stream);
                 reportBytes = stream.ToArray();
             }
-            using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
+
+            // Write the byte array to a file asynchronously
+            await using (FileStream fileStream = new FileStream(filePath, FileMode.Create, FileAccess.Write, FileShare.None, bufferSize: 4096, useAsync: true))
             {
-                fileStream.Write(reportBytes, 0, reportBytes.Length);
+                await fileStream.WriteAsync(reportBytes, 0, reportBytes.Length);
             }
-            Path.Combine("QuizzesResults", fileName);
+
             return filePath;
         }
         finally
         {
             _fileLock.Release();
         }
-
     }
+
     #endregion
 }

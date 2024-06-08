@@ -12,5 +12,6 @@ public interface IQuizService
     public Task<List<Quiz>> GetIncomingCourseQuizzes(Guid courseId);
     public Task DeleteQuizAsync(Quiz quiz);
 
-    Task HandleEndedQuizzessAsync();
+    Task HandleEndedQuizzessSubmissionAsync();
+    Task HandleEndedQuizzessResultsAsync();
 }

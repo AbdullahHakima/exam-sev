@@ -4,6 +4,7 @@ namespace examservice.Domain.Helpers.Dtos.Quiz
 {
     public class ViewStudentQuizDto
     {
+        public Guid QuizId { get; set; }
         public string Name { get; set; }
         public string? Description { get; set; }
         public DateTime StartedDate { get; set; }
